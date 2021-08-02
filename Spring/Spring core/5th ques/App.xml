@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+ http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+ 
+        
+	<bean id="Address" class="com.Spring.Aquestion6.Address">
+	<constructor-arg value="chatrapathiroad"></constructor-arg>
+  <constructor-arg value="vizag"></constructor-arg>
+	<constructor-arg value="Andhra"></constructor-arg>
+	<constructor-arg value=",530013"></constructor-arg>
+	<constructor-arg value="India1"></constructor-arg>
+	
+	</bean>
+    <bean id="customer" class="com.example.springassignment.customer">
+    <constructor-arg ref="Address"/>
+    </bean>
+    
+	<bean id="Question" class=" com.example.springassignmentQ2.Question">
+		<constructor-arg value="Q1"></constructor-arg>
+		<constructor-arg value="whom do like"></constructor-arg>
+		<constructor-arg >
+		<list>  
+		<value>List:friends</value>  
+		<value>List:family</value>  
+		</list>  
+		</constructor-arg>
+	</bean>
+	
+	
+	<bean id="Question1" class=" com.Spring.Aquestion2.Set">
+		<constructor-arg value="Q1"></constructor-arg>
+		<constructor-arg value="whom do you like"></constructor-arg>
+		<constructor-arg >
+		<set>  
+		<value>set:friends</value>  
+		<value>set:family</value>  
+		</set>  
+		</constructor-arg>
+	</bean>
+	
+	<bean id="Question2" class=" com.Spring.Aquestion2.Map">
+		<constructor-arg value="Q1"></constructor-arg>
+		<constructor-arg value="whom do you like"></constructor-arg>
+		<constructor-arg >
+		<map> 
+		<entry key="1" value="friends"></entry>  
+		<entry key="2" value="family"></entry>  	 
+		
+		</map>  
+		</constructor-arg>
+	</bean>
+	<bean id="demo" class="com.Spring.Aquestion5.demo">
+        <property name="msg" value="my property" />
+      </bean>
+      
+      <bean id="demo1" class="com.Spring.Aquestion8.initdcleanxml" 
+        init-method="init" destroy-method="cleanup">
+   		
+        <property name="msg" value="my property using xml" />
+        
+    </bean>
+    <bean id="cust" class="com.Spring.Aquestion5.customer">
+	<constructor-arg value="krishna"></constructor-arg>
+	<constructor-arg value="vizag"></constructor-arg>
+	</bean>
+	<bean id="app" class="com.example.springassignmentQ10.applicationContextAwareTest"/>
+</beans>
