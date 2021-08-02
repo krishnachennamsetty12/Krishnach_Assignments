@@ -17,10 +17,10 @@ public class Test {
 		
 	
 		@SuppressWarnings("resource")
-		ApplicationContext app= new AnnotationConfigApplicationContext(SpringassignmentApplicationQ6.class);
+		ApplicationContext app= new AnnotationConfigApplicationContext(Test.class);
 		
-		ReadingFromExternalfile readExternal=app.getBean(ReadingFromExternalfile.class);
-		System.out.println(readExternal);
-		readExternal.displayinfo();
+		App2 ob1=app.getBean(App2.class);
+		System.out.println(ob1);
+		ob1.displayinfo();
 }
 }
